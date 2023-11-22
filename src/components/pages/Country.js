@@ -6,16 +6,20 @@ import Iframe from "react-iframe";
 import "./Country.css";
 
 function Country() {
+
+	//Handling States For Application
 	const [country, setCountry] = useState("");
 	const [countryInfo, setCountryInfo] = useState();
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 
+	//Taking Input 
 	const handleInputChange = (e) => {
 		setCountry(e.target.value);
 		setError(null);
 	};
 
+	// Data Loading 
 	const handleSubmit = async () => {
 		try {
 			setLoading(true);
@@ -28,8 +32,6 @@ function Country() {
 		}
 		setCountry("");
 	};
-	console.log(countryInfo);
-	console.log("key",process.env.REACT_APP_GOOGLE_MAP_API_KEY)
 
 	return (
 		<div id='country-info-app'>
