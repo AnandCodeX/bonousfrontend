@@ -1,0 +1,54 @@
+
+@keyframes fadeInBlur {
+    from {
+        filter: blur(6px);
+        opacity: 0;
+    }
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+#country-info-app{
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #ccc;
+    backdrop-filter: blur(10px);
+    background-color: hsla(0,0%,100%,.13);
+    border: 2px solid hsla(0,0%,100%,.1);
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(8,7,16,.6);
+    animation: fadeInBlur 1s ease-out;
+    
+}
+#country-inf-title{
+    color: #e9755e;
+}
+
+input {
+    outline: none;
+    
+}
+button {
+   margin-left: 5px;
+}
+
+.country-info-data{
+    animation: fadeInBlur 1s ease-out;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.country-info-data-higlight{
+    color: #d0d1d7;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.country-info-data-error{
+    color: #D8000C;
+			background-color: #FFBABA;
+}
